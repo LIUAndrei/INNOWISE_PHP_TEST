@@ -1,0 +1,326 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*  this is a reminder of the fontfamily to be used. Weight 400 & 700 are loaded
+
+font-family: 'DM Sans', sans-serif; */
+
+/* background color #191919 */
+
+:root {
+  --main-bg-color: #191919;
+  --button-teal-color: #118da8;
+  --see-through-txt-color: rgba(255, 255, 255, 0.7);
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: var(--main-bg-color);
+  color: white;
+}
+
+div.narrow-container {
+  /* purpose of this container is to narrow down the page to 1440px as on the mockup */
+  width: 1440px;
+  margin: auto;
+}
+
+.see-through-text-22px {
+  font-size: 1.25rem;
+  line-height: 2rem;
+  color: var(--see-through-txt-color);
+}
+
+.teal-standard-text {
+  line-height: 1.6875rem;
+  font-size: 1.125rem;
+  color: var(--button-teal-color);
+}
+
+/* all the styles below are for the header */
+
+.header {
+  height: 7.5rem;
+  align-content: stretch;
+  align-items: center;
+}
+
+.container-logo,
+.container-nav {
+  flex: 1 1 auto;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+.link-list__nav-item {
+  margin-right: 2.5rem;
+  transition: 0.2s;
+}
+
+.link-list__nav-item:hover {
+  color: var(--button-teal-color);
+}
+
+/* all the styles below are for the main content */
+
+section {
+  margin-right: 4.375rem;
+  margin-left: 4.375rem;
+}
+
+.standart-teal-btn {
+  height: 3.125rem;
+  background-color: var(--button-teal-color);
+  line-height: 1.675rem;
+  border-radius: 6px;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  transition: 0.2s;
+}
+
+.standart-teal-btn:hover {
+  background-color: white;
+  color: var(--button-teal-color);
+}
+
+/* styles below for section with site title */
+
+.picture-container,
+.title-container {
+  width: 50%;
+}
+
+.title {
+  font-size: 4.375rem;
+  line-height: 5.5rem;
+  cursor: default;
+}
+
+.title__next {
+  font-size: 4.75rem;
+}
+
+.title__level {
+  font-size: 5rem;
+  font-weight: 700;
+}
+
+.listen-on {
+  line-height: 1.5rem;
+}
+
+.links-list__link-item {
+  margin-right: 1.125rem;
+}
+
+/* below are styles for episodes section */
+
+.main__episodes {
+  margin-top: 5.625rem;
+}
+
+.e-title-container__e-title {
+  font-size: 4rem;
+  line-height: 5rem;
+  letter-spacing: 0.1875rem;
+}
+
+.episodes__e-title-container {
+  justify-content: space-between;
+  align-items: center;
+  align-content: stretch;
+}
+
+.episode-list-container {
+}
+
+.episode-list-container__episode-item {
+  border-radius: 2rem;
+  background-color: black;
+  width: 81.25rem;
+  height: 32rem;
+  margin-top: 3.75rem;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 3.3125rem;
+  grid-row-gap: 0px;
+}
+
+.episode-list-container__episode-item:first-of-type {
+  margin-top: 4.125rem;
+}
+
+.episode-image-container__image {
+  height: 27rem;
+  width: 24.3125rem;
+  background-size: contain;
+}
+
+.episode-item__episode-description-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.episode-description-container__tag {
+  background-color: var(--main-bg-color);
+  line-height: 1.6875rem;
+  font-size: 1.125rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 0.375rem;
+}
+
+.episode-description-container__episode-name {
+  font-size: 4rem;
+  line-height: 4.375rem;
+  letter-spacing: 0.16rem;
+}
+
+/* below are styles of section with host */
+
+.main__host {
+  margin-top: 16.25rem;
+}
+
+.host__text,
+.host__photo {
+  width: 50%;
+}
+
+.host-text__name {
+  font-size: 4rem;
+  line-height: 5rem;
+  letter-spacing: 0.18rem;
+}
+
+/* below are styles for subscribe section */
+
+.main__subscribe {
+  background-color: black;
+  border-radius: 2rem;
+  margin-top: 12.5rem;
+}
+
+.main-subscribe__subscribe-text,
+.main-subscribe__subscribe-form {
+  width: 50%;
+  padding: 3.75rem;
+}
+
+.subscribe-text__subscribe-call {
+  font-size: 4.5rem;
+  line-height: 5rem;
+  letter-spacing: 0.18rem;
+  padding-right: 3rem;
+}
+
+.form-input {
+  height: 5.125rem;
+  width: 32.625rem;
+  background-color: var(--main-bg-color);
+  border-radius: 0.375rem;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  padding-left: 1.25rem;
+}
+
+.form-input::placeholder {
+  color: var(--see-through-txt-color);
+  transition: 0.2s;
+}
+
+.form-input:focus::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.form__email {
+  margin-top: 1.25rem;
+}
+
+.form__submit {
+  margin-top: 1.25rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+/* below are styles for testimonials section */
+
+.main__testimonials {
+  margin-top: 12.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+}
+
+.main-testimonials__testimonial-box {
+  background-color: black;
+  height: 20rem;
+  border-radius: 2rem;
+  padding: 3.125rem;
+}
+
+.testimonial-box__line-of-stars img {
+  margin-right: 0.375rem;
+}
+
+.testimonial-box__blockquote {
+  font-size: 2.25rem;
+  line-height: 2.7rem;
+  margin-top: 1.25rem;
+}
+
+.testimonial-box__cite {
+  display: block;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  font-style: normal;
+  margin-top: 1.25rem;
+}
+
+/* below are the styles for footer  */
+
+.footer {
+  margin-top: 12.5rem;
+  margin-left: 4.375rem;
+  margin-right: 4.375rem;
+  height: 21.1875rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+}
+
+.footer-logo__social-networks {
+  margin-top: 1.625rem;
+}
+
+.footer-logo__social-networks a {
+  margin-right: 0.825rem;
+}
+
+.footer__nav {
+}
+
+.footer-nav__nav-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 13.1875rem;
+}
+
+.footer-nav-list__item {
+  margin-bottom: 0.625rem;
+  width: 50%;
+}
+
+.footer-nav-list__item a {
+  font-size: 1.125rem;
+  line-height: 1.6875rem;
+  transition: 0.2s;
+}
+
+.footer-nav-list__item a:hover {
+  color: var(--button-teal-color);
+}
