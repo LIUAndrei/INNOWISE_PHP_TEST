@@ -1,11 +1,4 @@
-<?php
-    get_header();
-?>
-
-      <!-- main part of the site -->
-      <main class="main">
-        <!-- top section of the site with a photo and a heading title -->
-        <section class="main__next-level next-level flex flex-row pt-10">
+<section class="main__next-level next-level flex flex-row pt-10">
   <!-- left container with a photo inside -->
   <div class="next-level__picture-container picture-container rounded-xl">
     <img
@@ -106,23 +99,3 @@
   <h2 class="main-testimonials__title hidden">List of testimonials</h2>
   <?php include "components/testimonials.php" ?>
 </section>
-
-
-
-
-
-         <!-- <?php
-            if( have_posts()) {
-              while( have_posts()) {
-                the_post();
-                the_content();
-              }
-            }
-
-        ?>  -->
-      </main>
-
-      <!-- footer of the page -->
-<?php
-    get_footer();
-?>
